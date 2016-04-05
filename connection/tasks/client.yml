@@ -5,7 +5,7 @@
     update_cache: yes
     cache_valid_time: 86400
   delegate_to: '{{ openvpn_client }}'
-  with_items: openvpn_packages
+  with_items: "{{ openvpn_packages }}"
 
 - name: client | store key
   copy:
